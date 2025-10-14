@@ -583,11 +583,19 @@ footer {
   width: 100%;
   background: var(--dark);
   border-radius: var(--radius);
+  
+}
+
+.footer-wrapper{
+  width: 100%;
+  max-width: 90rem;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 5rem;
   color: white;
   padding: 4rem;
+
 }
 
 footer .first {
@@ -601,6 +609,15 @@ footer .first {
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
+}
+
+.footer-left .logo{
+  font-size: 1.8rem;
+
+}
+.footer-left .logo .logo-icon{
+  width: 4rem;
+
 }
 
 .grid-col1 > :nth-child(2) {
