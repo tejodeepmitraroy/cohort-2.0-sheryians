@@ -1,0 +1,596 @@
+@font-face {
+  font-family: "lufga-regular";
+  src: url(/fonts/LufgaRegular.ttf);
+}
+@font-face {
+  font-family: "Lufga-light";
+  src: url(/fonts/LufgaLight.ttf);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 0;
+  padding: 0 0;
+  font-family: "lufga-light";
+  color: white;
+  scroll-behavior: smooth;
+}
+
+main {
+  width: 100%;
+  height: auto;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 1.5rem 0;
+  justify-content: space-between;
+}
+
+nav > :first-child {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+nav > :nth-child(2) {
+  width: 100%;
+  height: auto;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav > :nth-child(3) {
+  width: 100%;
+  height: auto;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  padding-right: 1rem;
+}
+
+nav > :nth-child(4) {
+  /* width: 100%; */
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  padding-right: 1rem;
+}
+
+.nav-menu {
+  display: none;
+  width: fit-content;
+  padding: 1rem 2.4rem;
+  background-color: #151926;
+  border-radius: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: calc(1rem * 1);
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+.CTA {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: calc(1rem * 1);
+}
+
+.CTA > button {
+  border: 2px solid #cafe3f;
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: transparent;
+  color: white;
+  font: 400;
+  font-family: "lufga-regular";
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.ham-menu {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100dvh;
+  background: linear-gradient(to Bottom, #1b2031, #000000);
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 80rem;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.hero-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 7rem;
+}
+
+.content-1 {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+
+.content-1 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 15rem;
+}
+
+.floating-arrow {
+  position: absolute;
+  width: 10rem;
+  top: -6rem;
+  right: -6rem;
+}
+
+.king-monkey {
+  width: 12rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+.king-monkey img {
+  width: 9rem;
+  background: #171717;
+  border-radius: 100%;
+  padding: 1rem;
+}
+
+.content-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+}
+
+.content-2 img {
+  width: 100%;
+  max-width: 50rem;
+}
+
+.content-3 {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.content-3 > :first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(6rem);
+}
+
+.content-3 > :first-child > img {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  aspect-ratio: 1/1;
+}
+
+.analytics {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.analytics .analytics-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.4rem;
+  font-size: 2rem;
+  font-weight: 500;
+  align-items: center;
+  border-right: 0.15rem solid #cafe3f;
+}
+.analytics > :last-child {
+  border: none;
+}
+
+.analytics .analytics-card > :nth-child(1) > :nth-child(2) {
+  color: #cafe3f;
+}
+
+.analytics .analytics-card > :nth-child(2) {
+  font-size: 1rem;
+  color: #cafe3f;
+}
+
+/* ////////////////////////////////////////////////// */
+/* Action classes */
+
+.auction {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  background-color: #000000;
+  position: relative;
+}
+
+.auction-container {
+  position: relative;
+  width: 100%;
+  max-width: 80rem;
+  height: 100%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.floating-arrow-2 {
+  display: none;
+  width: 20px;
+  position: absolute;
+  width: 10rem;
+  top: -6rem;
+  right: -6rem;
+}
+
+.auction-header {
+  position: relative;
+  width: 100%;
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+.auction-header > .header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 1rem;
+}
+.auction-header > :nth-child(2) {
+  display: none;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 22rem;
+}
+.auction-header .controller {
+  width: 100%;
+  font-size: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: calc(1rem);
+  padding-right: 1rem;
+}
+.auction-header .header > :first-child {
+  color: #cafe3f;
+  font-size: 1.3rem;
+}
+.controller button {
+  padding: 1.2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.controller button img {
+  width: 30px;
+  height: 30px;
+}
+.controller > :first-child {
+  background: #000000;
+  border: 1px solid white;
+}
+
+.auction-grid {
+  width: 100%;
+  max-width: 70rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: calc(5rem);
+  margin-top: 5rem;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(2rem);
+}
+
+.auction-grid .item button {
+  position: relative;
+  background-color: #1b1c1e;
+  color: white;
+  padding: 0.9rem 3rem;
+  font-family: "lufga-regular";
+  font-size: 1rem;
+  border-radius: 0.8rem;
+  width: fit-content;
+}
+
+/* .auction-grid .item .btn-container{
+
+  
+
+} */
+
+.card {
+  position: relative;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1b1c1e;
+  border-radius: 1rem;
+  border: 2px solid #454545;
+  padding: 1rem;
+}
+
+.card-alert {
+  position: absolute;
+  top: 15%;
+  left: -5%;
+  z-index: 20;
+  background-color: #cafe3f;
+  font-family: "lufga-regular";
+  color: black;
+  padding: 0.4rem;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+}
+
+.card .card-content {
+  width: 100%;
+  clip-path: polygon(
+    0 0,
+    40% 0%,
+    60% 13%,
+    100% 13%,
+    100% 100%,
+    50% 100%,
+    50% 90%,
+    0% 90%
+  );
+  border-radius: 20px;
+}
+
+.card .card-header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  top: 1rem;
+  right: 1.2rem;
+}
+
+.card .card-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 1.2rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: calc(0.5rem);
+}
+
+.card-footer img {
+  width: 20px;
+}
+
+.item-1 .card-content {
+  background-color: #8c01fa;
+}
+.item-2 .card-content {
+  background-color: #d5fa00;
+}
+.item-3 .card-content {
+  background-color: #f76a07;
+}
+
+.item-1 button {
+  box-shadow: 4px 4px #8c01fa;
+}
+.item-2 button {
+  box-shadow: 4px 4px #d5fa00;
+}
+.item-3 button {
+  box-shadow: 4px 4px #f76a07;
+}
+
+/*=elemement */
+
+h1 {
+  font-size: 3rem;
+  text-wrap: balance;
+
+  display: flex;
+  flex-direction: column;
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h1 > :first-child {
+  font-size: 400;
+  font-weight: bold;
+}
+h2 {
+  font-size: 2.4rem;
+  line-height: 1rem;
+}
+
+/* sm */
+@media only screen and (min-width: 40rem) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 3rem;
+    font-size: 500;
+  }
+
+  /* nav > :nth-child(3) {
+    display: flex;
+  } */
+  .content-2 img {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 1rem;
+  }
+}
+
+/* md */
+@media only screen and (min-width: 48rem) {
+  /* nav > :nth-child(2) {
+    display: flex;
+  } */
+
+  .auction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* lg */
+@media only screen and (min-width: 64rem) {
+  nav > :nth-child(2) {
+    display: flex;
+  }
+  nav > :nth-child(3){
+    display: flex;
+  }
+  nav >:nth-child(4){
+    display: none;
+  }
+  
+  .content-container {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin-top: 3rem;
+  }
+  .content-1 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  .content-2 {
+    grid-column: span 3 / span 3;
+  }
+  .content-2 img {
+    width: 100%;
+    max-width: 50rem;
+  }
+  .content-3 {
+    flex-direction: column;
+    margin-top: 3rem;
+    padding-right: 2rem;
+  }
+
+  .analytics {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .content-3 > :first-child {
+    gap: calc(2.2rem);
+  }
+
+  .content-3 > :first-child > img {
+    width: 8.6rem;
+    display: flex;
+    aspect-ratio: 1/1;
+  }
+  .analytics .analytics-card {
+    padding: 1.5rem 2rem;
+    border-right: none;
+    border-bottom: 0.15rem solid #cafe3f;
+  }
+
+  .auction-header {
+    display: flex;
+  }
+  .auction-header > :nth-child(2) {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 22rem;
+  }
+  .auction-grid {
+    
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: calc(4rem);
+   
+  }
+  .analytics-card {
+    font-size: 2.5rem;
+  }
+}
+
+/* xl */
+@media only screen and (min-width: 80rem) {
+  
+}
+
+/* 2xl */
+@media only screen and (min-width: 96rem) {
+}
