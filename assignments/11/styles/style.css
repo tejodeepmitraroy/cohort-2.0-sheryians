@@ -491,7 +491,6 @@ main footer .footer-3 a {
   }
   main section .top {
     width: 100%;
-    border: 2px solid blue;
     padding: 0;
     border-radius: var(--radius);
   }
@@ -553,9 +552,6 @@ main footer .footer-3 a {
   }
   main section.sec5 {
     flex-direction: column;
-  }
-  main section.sec5 .top {
-    border: 2px solid green;
   }
   main section.sec5 .bottom {
     grid-template-columns: repeat(3, minmax(0, 1fr));
